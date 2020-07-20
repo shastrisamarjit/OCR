@@ -24,5 +24,5 @@ urlpatterns = [
     path('savestudent/',views.savestudent,name="savestudent"),
     path('loginstudent/',views.loginstudent,name="loginstudent"),
     path('checkloginstudent/',views.checkloginstudent,name="checkloginstudent"),
-
+    path('phoneurl/',views.phoneurl_view),
 ]

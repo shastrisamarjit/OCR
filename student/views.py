@@ -30,3 +30,18 @@ def checkloginstudent(request):
     except Studenttable.DoesNotExist:
         messages.error(request,"Invalid User")
         return redirect("checkloginstudent")
+
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
+from django.http import JsonResponse
+
+@method_decorator(csrf_exempt,name='dispatch')
+def phoneurl_view(request):
+    pnum = request.POST.get('cname')
+    try:
+        Studenttable.objects.get(contactno=pnum)
+        data={'error':'Contact number taken'}
+    except Studenttable.DoesNotExist:
+        data={'message':'Contact number available'}
+    return JsonResponse(data)
+
