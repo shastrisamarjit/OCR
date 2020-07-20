@@ -10,19 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <title>online course registration</title>
-    <script>
-        function ajaxrequest(input_id,req_url,)
-        {
-            var cn = document.getElementById(input_id).value;
-            var val='cname='+cn;
-            var request=new XMLHttpRequest();
-            request.onreadystatechange=check;
-            request.open("POST",req_url,true);
-            request.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-            request.send(val);
-
-        }
-    </script>
+    <script src="{% static 'js/ajaxcall.js' %}"></script>
   </head>
   <body style="background-image: url({% static 'images/online2.png' %});background-repeat: no-repeat;
           background-size: 17cm;background-position: top">

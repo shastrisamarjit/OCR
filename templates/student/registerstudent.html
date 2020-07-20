@@ -11,15 +11,16 @@
        </tr>
        <tr>
            <th>Name</th>
-           <th><input id="" type="text"required name="r1"></th>
+           <th><input type="text" required name="r1"></th>
        </tr>
        <tr>
            <th>ContactNo</th>
-           <th><input type="number"required name="r2"></th>
+           <th><input id="id_phone" type="number" onblur="displayphone()" required name="r2"></th>
        </tr>
+       <tr align="center"><td colspan="2"><font color="red"><span id="sp_phone"></span></font></td></tr>
        <tr>
            <th>email</th>
-           <th><input type="email"required name="r3"></th>
+           <th><input type="email" required name="r3"></th>
        </tr>
        <tr>
            <th>Password</th>
@@ -27,7 +28,7 @@
        </tr>
        <tr align="center">
            <th colspan="2">
-               <button type="submit" class="btn btn-success">Register</button>
+               <button type="submit" class="btn btn-success"id="b1">Register</button>
            </th>
        </tr>
        <tr align="center">
