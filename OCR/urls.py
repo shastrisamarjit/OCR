@@ -23,4 +23,5 @@ urlpatterns = [
     path('student/',include('student.urls')),
     path('home/',TemplateView.as_view(template_name="home.html"),name="home")
 
+
 ]
