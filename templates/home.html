@@ -1,0 +1,18 @@
+{% extends 'common.html' %}
+{% block common %}
+    <br>
+    <br>
+    <br>
+    <table align="left"border="0">
+      <tr align="center"><th width="80"></th><th>
+          <a href="{% url 'adminlogin' %}">
+            <button type="button" class="btn btn-success btn-lg">Admin</button>
+          </a></th></tr>
+      <tr><th></th></tr>
+      <tr align="center"><th width="30"></th><th>
+         <a href="{% url 'studentpage' %}">
+          <button type="button" class="btn btn-success btn-lg">Student</button>
+         </a>
+      </th></tr>
+    </table>
+{% endblock %}

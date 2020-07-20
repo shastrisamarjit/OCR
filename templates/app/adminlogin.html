@@ -1,0 +1,13 @@
+{% extends 'common.html' %}
+{% block common %}
+    <br>
+    <br>
+    <form action="{% url 'adminsave' %}"method="post">
+     {% csrf_token %}
+      <table align="center"border="2">
+         {{ admin }}
+         <tr><th height="30"colspan="2"></th></tr>
+         <tr align="center"><th colspan="2"><button type="submit" class="btn btn-info">Login</button></th></tr>
+      </table>
+    </form>
+{% endblock %}

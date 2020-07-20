@@ -1,0 +1,21 @@
+{% extends 'common.html' %}
+{% block common %}
+{% include 'app/schedule.html' %}
+    <br>
+    <br>
+    <h1 align="center">Schedule A New Class</h1>
+    <br>
+   <form action="{% url 'schedulesave' %}"method="post">
+   {% csrf_token %}
+    <table align="center">
+        {{ schedule }}
+        <tr><th height="30"></th></tr>
+        <tr align="center"><th colspan="2">
+            <button type="submit" class="btn btn-success">Register</button></th></tr>
+        <tr><th>{% for x in messages %}
+            <font color="#ff8c00"size="20">{{ x }}</font>
+            {% endfor %}
+        </th></tr>
+    </table>
+   </form>
+{% endblock %}

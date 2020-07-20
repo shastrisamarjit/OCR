@@ -1,0 +1,27 @@
+{% extends 'common.html' %}
+{% load static %}
+{% block common %}
+{% include 'student/studentcommon.html' %}
+    <br>
+    <form action="{% url 'checkloginstudent' %}"method="post">
+     {% csrf_token %}
+     <table align="center"bgcolor="white">
+      <tr bgcolor="green"style="color: white"align="center">
+          <th colspan="2">Student Login</th>
+      </tr>
+      <tr>
+          <th>Useremail</th>
+          <th><input type="text"required name="l1"></th>
+      </tr>
+      <tr>
+          <th>Password</th>
+          <th><input type="password"required name="l2"></th>
+      </tr>
+      <tr align="center">
+          <th colspan="2">
+              <button type="submit" class="btn btn-primary">Login</button>
+          </th>
+      </tr>
+     </table>
+    </form>
+{% endblock %}

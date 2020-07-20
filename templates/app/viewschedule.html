@@ -1,0 +1,32 @@
+{% extends 'common.html' %}
+{% load static %}
+{% block common %}
+{% include 'app/schedule.html' %}
+  <br>
+  <table align="center"border="2"style="background-color: white">
+      <tr>
+          <th>Name</th>
+          <th>Faculty</th>
+          <th>Date</th>
+          <th>Fee</th>
+          <th>Duration</th>
+          <th>Update</th>
+          <th>Delete</th>
+      </tr>
+     {% for x in data %}
+      <tr style="color: blue"align="center">
+          <th>{{ x.name }}</th>
+          <th>{{ x.faculty }}</th>
+          <th>{{ x.date }}</th>
+          <th>{{ x.fee }}</th>
+          <th>{{ x.duration }}</th>
+          <th><a href="#">
+                <img src="{% static 'images/update.png' %}"width="30">
+              </a></th>
+          <th><a href="{% url 'deleteschedule' %}?no={{ x.name }}">
+                <img src="{% static 'images/delete.png' %}"width="20">
+              </a></th>
+      </tr>
+     {% endfor %}
+  </table>
+{% endblock %}
